@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>{{options.subject}}</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+  <table cellspacing="0" cellpadding="0"
+    style="font-family: Georgia, Times, Times New Roman, serif; width: 100%; max-width: 1200px; margin: 0 auto; border: 1px solid #dedede;padding: 20px;">
+    <thead>
+      <tr>
+        <th style="border-bottom: 1px solid #dedede; padding-bottom: 20px;">
+          <img style="max-width: 500px;" src="{{MailSetting.logoUrl}}" />
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <p style="font-family: Georgia, Times, Times New Roman, serif; font-weight: 700; font-size: 20px;">{{ options.Hello }} </p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="font-family: Georgia, Times, Times New Roman, serif; font-size: 18px; font-weight: 500;">
+            {{{ options.Body }}}
+          </p>
+          <a href="{{to.link}}" style="font-family: Georgia, Times, Times New Roman, serif; background-color:#1aaf5d; color: #fff; display: inline-block; padding: 6px 20px; border-radius: 5px; text-decoration: none; font-size: 20px;" target="_blank" title="Verify Account">{{ options.verifyButtonText }}</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="font-family: Georgia, Times, Times New Roman, serif; margin-top: 40px"><span>{{ MailSetting.thanks }}</span><br />
+            {{ MailSetting.companyTeam }}
+          </p>
+        </td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td>
+          <p style="text-align:center;background-color:#f1f1f1;padding:20px;font-family: Georgia, Times, Times New Roman, serif;">
+            {{ MailSetting.footer }} <a href="mailto:{{ MailSetting.supportEmail }}" target="_blank" style="color:#1aaf5d;">{{ MailSetting.supportEmail }}</a>
+          </p>
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+</body>
+</html>
