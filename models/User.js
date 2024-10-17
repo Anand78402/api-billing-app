@@ -20,7 +20,7 @@ const UserSchema = new Schema({
   lastName: { type: String, default: '' },
   email: { type: String, required: true, unique: true, lowercase: true, index: true },
   password: { type: String, trim: true, required: true }, //select: false
-  userType: { type: Number, default: 2, enum: [1, 2] }, // 1=>Admin User, 2=>Normal user
+  userType: { type: Number, default: 3, enum: [1, 2, 3] }, // 1=>Super Admin, 2=>Admin ,3=>Customer
   loginCode: { type: String, default: '' },
   picture: { type: String, default: '' },
   lastLogin: { type: Date, default: '' },
